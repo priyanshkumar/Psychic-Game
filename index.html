@@ -5,32 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Psychic Game</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
     <script type="text/javascript" src="./assets/javascript/game.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Concert+One|Lobster+Two"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <div class="heading">
-      <h1>
-        Psychic Game
-      </h1>
-    </div>
-    <div class="content">
-      <h3>
-        Guess what letter I m thinking off
-      </h3>
-      <div class="score-count">
-        <div>
-          <h4>Total Wins: <span id="winText"></span></h4>
-        </div>
-        <div>
-          <h4>Total Loss: <span id="lossText"></span></h4>
+    <div class="container game p-3 text-center">
+      <div class="row p-2">
+        <div class="col-12">
+          <div class="heading">
+            <h1>
+              Psychic Game
+            </h1>
+          </div>
         </div>
       </div>
-      <div>
-        <h4>Total Guess Left: <span id="guessLeft"></span></h4>
-      </div>
-      <div>
-        <h4>Lettters already guessed: <span id="letterGuess"></span></h4>
+      <div class="row p-2">
+        <div class="col">
+          <div class="container content">
+            <h4>
+              Guess what letter I m thinking off: <span id="guess"></span>
+            </h4>
+            <div>
+              <h5>Total Wins: <span id="winText"></span></h5>
+            </div>
+            <div>
+              <h5>Total Loss: <span id="lossText"></span></h5>
+            </div>
+            <div>
+              <h5>Total Guess Left: <span id="guessLeft"></span></h5>
+            </div>
+            <div>
+              <h5>Lettters already guessed: <span id="letterGuess"></span></h5>
+            </div>
+            <div>
+              <h5 id="message"></h5>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

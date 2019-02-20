@@ -1,0 +1,25 @@
+body {
+  margin: 15% auto;
+  background-color: #dddddd;
+}
+
+.game {
+  width: 50%;
+  background-color: #ffffff;
+}
+
+.heading {
+  font-family: "Lobster Two", cursive;
+}
+
+.content {
+  font-family: "Concert One", cursive;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
