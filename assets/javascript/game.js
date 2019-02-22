@@ -33,7 +33,7 @@ var counter = 0;
 var loss = 0;
 var guess = 10;
 
-var random = Math.floor(Math.random() * 26 + 1);
+var random = Math.floor(Math.random() * 26);
 
 document.onkeyup = function(event) {
   var guessOutput = document.getElementById("guessLeft");
@@ -89,9 +89,30 @@ document.onkeyup = function(event) {
       counter++;
       guess--;
 
+      var tocheck = true;
+
       guessOutput.textContent = guess;
       for (var i = 0; i < userenter.length; i++) {
-        var letters = letters + "," + userenter[i];
+        var checker;
+        checker = userenter[i];
+        for (var j = i - 1; j >= 0; j--) {
+          if (checker === userenter[j]) {
+            counter--;
+            guess++;
+            tocheck = false;
+            messageOutput.classList.add("red");
+            messageOutput.textContent =
+              "You have already entered the letter '" + checker + "'";
+          }
+        }
+        if (tocheck === true) {
+          var letters;
+          if (letters == undefined) {
+            letters = userenter[i];
+          } else {
+            letters = letters + "," + userenter[i];
+          }
+        }
       }
       letterOutput.textContent = letters;
     }
