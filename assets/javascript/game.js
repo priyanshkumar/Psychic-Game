@@ -91,7 +91,6 @@ document.onkeyup = function(event) {
 
       var tocheck = true;
 
-      guessOutput.textContent = guess;
       for (var i = 0; i < userenter.length; i++) {
         var checker;
         checker = userenter[i];
@@ -114,6 +113,7 @@ document.onkeyup = function(event) {
           }
         }
       }
+      guessOutput.textContent = guess;
       letterOutput.textContent = letters;
     }
   } else {
